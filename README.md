@@ -185,7 +185,7 @@ Directions:
    1. linux(client alacritty) ssh to mac(sshd server,homebrew nvim/tmux)
    2. mac(client alacritty) to linux(sshd server)
    3. windows(client alacritty) to mac or linux
-   4. [failed] ios(client prompt3) to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
+   4. [failed] ios(client prompt3) to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明set to allow access to clipboard with prompt3, direct string echo test or tmux test successful, nvim test failed, unknown reason）
 
 ## 7. special thanks 
 
