@@ -125,13 +125,15 @@ osc52 = "CopyPaste" # or CopyOnly on default
 
 在mac下我用着不行，改成下面的组合可以用
 
+```toml
 [keyboard]
 bindings = [
   { key = "I", mods = "Command|Option", action = "ToggleViMode" },
 ]
+```
 
 使用步骤：
-   1. 按下command+option+i之后启动vi模式
+   1. 按下command+option+i（或ctrl+shift+space）启动vi模式
    2. 和vi一样，用v或V启动选择
    3. 选好后，按y进行复制
    4. 到任何地方去粘贴（p或ctrl+v,command+v等等）
@@ -155,5 +157,10 @@ setw -g mode-keys vi
    4. 选择完成后按下enter
    5. 到任何地方去粘贴（在tmux里可以用ctrl+b,]）
 
+## 6. tested platform
+   1. linux(client) ssh to mac(server)
+   2. mac to linux
+   3. windows to mac or linux
+   4. [failed] ios to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
 
 
