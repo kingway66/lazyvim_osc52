@@ -1,10 +1,12 @@
 # lazyvim_osc52 over ssh
 ## nvim > 0.11
 ## 1. 如果只用macos、Linux
-
+~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
 vim.opt.clipboard:append("unnamedplus")
 ```
+
+~/.config/nvim/init.lua
 ```lua title=~/.config/nvim/init.lua
 if vim.env.SSH_TTY then
   vim.g.clipboard = "osc52" -- the official usage
@@ -14,10 +16,11 @@ end
 
 ### 使用系统剪贴板并使用osc52
 
+~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
 vim.opt.clipboard:append("unnamedplus")
 ```
-
+~/.config/nvim/init.lua
 ```lua title=~/.config/nvim/init.lua
 local function my_paste(reg)
   return function(lines)
@@ -43,10 +46,12 @@ end
 ```
 ## 3. 使用windows，但希望在linux、mac下能用p
 
+~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
 vim.opt.clipboard:append("unnamedplus")
 ```
 
+~/.config/nvim/init.lua
 ```lua title=~/.config/nvim/init.lua
 local function my_paste(reg)
   return function(lines)
