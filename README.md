@@ -189,8 +189,8 @@ Directions:
 
 ## 7. special thanks 
 
-[穿透 wsl 和 ssh, 新版本 neovim 跨设备任意复制，copy anywhere!](https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere)
-[Alacritty 终端配置指南](https://www.kevnu.com/zh/posts/18)
+* [穿透 wsl 和 ssh, 新版本 neovim 跨设备任意复制，copy anywhere!](https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere)
+* [Alacritty 终端配置指南](https://www.kevnu.com/zh/posts/18)
 
 
 
