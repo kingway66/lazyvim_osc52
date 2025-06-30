@@ -1,5 +1,5 @@
 # lazyvim_osc52 over ssh
-## nvim > 0.11
+## nvim > 0.11 lazyvim startup > 2025.06
 ## 1. 如果只用macos、Linux
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -13,8 +13,6 @@ if vim.env.SSH_TTY then
 end
 ```
 ## 2. 如果也用windows，能接受用终端ctrl+shift+v来paste，不用nvim的p功能
-
-### 使用系统剪贴板并使用osc52
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -78,3 +76,33 @@ if vim.env.SSH_TTY then
   end
 end
 ```
+
+/etc/ssh/sshd_config
+```
+AcceptEnv SSH_CLIENT_OS
+```
+reboot
+
+
+在客户端windows主机上
+c:\Users\yourusername\.ssh\config
+```
+Host *
+    SendEnv SSH_CLIENT_OS
+```
+
+c:\app\sshgo.bat
+```
+set SSH_CLIENT_OS = %%OS%%
+SSH -p 22 username@hostname.ip
+```
+go the alacritty and start ssh with this bat file
+
+
+
+## 4. the alacritty config > 15.1
+```
+[terminal]
+osc52 = "CopyPaste" # or CopyOnly on default
+```
+
