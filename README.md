@@ -1,10 +1,12 @@
-# lazyvim_osc52 over ssh
+# lazyvim neovim tmux alacritty osc52 over ssh
 
 网上很多信息过时了，总结了前人智慧，记录在此。如有错误还请海涵。
 
 ## 需要的环境
-nvim > 0.11 
-lazyvim startup > 2025.06
+* nvim > 0.11 
+* lazyvim startup > 2025.06
+* tmux 3.5a
+* alacritty 0.15.1
 
 ## 1. 如果只用macos、Linux，这就很好办了
 
@@ -113,7 +115,7 @@ ssh -p 22 username@hostname.ip
 go the alacritty and start ssh with this bat file
 
 
-## 4. the alacritty config > 15.1
+## 4. the alacritty osc52 support and vi mode
 
 ~/.config/alacritty/alacritty.toml
 ```toml
@@ -158,7 +160,7 @@ setw -g mode-keys vi
    5. 到任何地方去粘贴（在tmux里可以用ctrl+b,]）
 
 ## 6. tested platform
-   1. linux(client alacritty) ssh to mac(sshd server)
+   1. linux(client alacritty) ssh to mac(sshd server,homebrew nvim/tmux)
    2. mac(client alacritty) to linux(sshd server)
    3. windows(client alacritty) to mac or linux
    4. [failed] ios(client prompt3) to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
