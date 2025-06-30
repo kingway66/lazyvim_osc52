@@ -100,9 +100,15 @@ Host *
 ```
 
 c:\app\sshgo.bat
-```
-set SSH_CLIENT_OS = %%OS%%
-SSH -p 22 username@hostname.ip
+```bat
+@echo off
+
+set SSH_CLIENT_OS=%OS%
+
+echo starting_with: %SSH_CLIENT_OS%
+
+:: ssh %*
+ssh -p 22 username@hostname.ip
 ```
 go the alacritty and start ssh with this bat file
 
@@ -111,7 +117,7 @@ go the alacritty and start ssh with this bat file
 ## 4. the alacritty config > 15.1
 
 ~/.config/alacritty/alacritty.toml
-```
+```toml
 [terminal]
 osc52 = "CopyPaste" # or CopyOnly on default
 ```
