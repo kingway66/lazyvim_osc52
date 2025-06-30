@@ -148,7 +148,7 @@ bindings = [
 Directions of use:
 
    1. Press Command+Option+I (or Ctrl+Shift+Space) to start VI mode
-   2. As with VI, start the selection with V or V
+   2. As with VI, start the selection with v or V
    3. Once selected, press y to copy
    4. Paste anywhere (p or ctrl+v, command+v, etc.)
    5. To exit VI mode, press the start combo key again
@@ -176,7 +176,7 @@ setw -g mode-keys vi
 Directions:
 
    1. Press Ctrl+B, and then press [, and a line number prompt will appear in the upper right corner to enter VI mode
-   2. Move the cursor to the place you want to copy, press Space (equivalent to V in VI), and a yellow selection will appear
+   2. Move the cursor to the place you want to copy, press Space (equivalent to v in VI), and a yellow selection will appear
    3. Or press the big V to copy the line
    4. Press Enter when the selection is complete
    5. Paste anywhere (CTRL+B,] or ctrl+v/command+v in TMUX)
@@ -186,5 +186,11 @@ Directions:
    2. mac(client alacritty) to linux(sshd server)
    3. windows(client alacritty) to mac or linux
    4. [failed] ios(client prompt3) to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
+
+## 7. special thanks 
+
+[穿透 wsl 和 ssh, 新版本 neovim 跨设备任意复制，copy anywhere!](https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere)
+[Alacritty 终端配置指南](https://www.kevnu.com/zh/posts/18)
+
 
 
