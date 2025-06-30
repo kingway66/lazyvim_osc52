@@ -97,7 +97,7 @@ AcceptEnv SSH_CLIENT_OS
 
 on client windows
 
-c:\Users\yourusername\.ssh\config
+c:/Users/yourusername/.ssh/config
 ```
 Host *
     SendEnv SSH_CLIENT_OS
