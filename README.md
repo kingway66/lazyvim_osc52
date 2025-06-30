@@ -51,7 +51,7 @@ end
 
 ```
 
-## 3. 备用windows，希望在linux、mac下能用p
+## 3. [recommended]备用windows，希望在linux、mac下能用p
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
