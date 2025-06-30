@@ -20,7 +20,7 @@ if vim.env.SSH_TTY then
 end
 ```
 
-## 2. 如果也用windows，能接受用终端ctrl+shift+v来paste，不用nvim的p功能
+## 2. 如果主要用windows，希望在全平台用终端ctrl+shift+v来paste，不用nvim的p功能
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -51,7 +51,7 @@ end
 
 ```
 
-## 3. 使用windows，但希望在linux、mac下能用p
+## 3. 备用windows，希望在linux、mac下能用p
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -111,7 +111,6 @@ echo starting_with: %SSH_CLIENT_OS%
 ssh -p 22 username@hostname.ip
 ```
 go the alacritty and start ssh with this bat file
-
 
 
 ## 4. the alacritty config > 15.1
