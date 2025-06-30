@@ -1,0 +1,1 @@
+# lazyvim_osc52
