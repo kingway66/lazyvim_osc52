@@ -1,14 +1,16 @@
 # lazyvim neovim tmux alacritty osc52 over ssh
 
-网上很多信息过时了，总结了前人智慧，记录在此。如有错误还请海涵。
+网上很多相关信息过时了，总结了前人智慧，记录在此。如有错误还请海涵。
+A lot of information about nvim and osc52 is outdated, and the wisdom of predecessors is summarized and recorded here. 
+If there is an error, please also Haihan.
 
-## 需要的环境
+## 需要的环境The environment that is needed
 * nvim > 0.11 
 * lazyvim startup > 2025.06
 * tmux 3.5a
 * alacritty 0.15.1
 
-## 1. 如果只用macos、Linux，这就很好办了
+## 1. 如果只用macos、Linux，这就很好办了If you only use macOS and Linux, this is very easy
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -22,7 +24,7 @@ if vim.env.SSH_TTY then
 end
 ```
 
-## 2. 如果主要用windows，希望在全平台用终端ctrl+shift+v来paste，不用nvim的p功能
+## 2. 如果主要用windows，希望在全平台用终端ctrl+shift+v来paste，不用nvim的p功能If you mainly use Windows, you want to use the terminal Ctrl+Shift+V to paste on all platforms, instead of the P function of nvim
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -53,7 +55,7 @@ end
 
 ```
 
-## 3. [recommended]备用windows，希望在linux、mac下能用p
+## 3. [recommended]备用windows，希望在linux、mac下能用p。Occasionally work on Windows, hope to be able to use P under Linux, Mac
 
 ~/.config/nvim/lua/config/options.lua
 ```lua title=~/.config/nvim/lua/config/options.lua
@@ -93,7 +95,7 @@ end
 AcceptEnv SSH_CLIENT_OS
 ```
 
-在客户端windows主机上
+on client windows
 
 c:\Users\yourusername\.ssh\config
 ```
@@ -124,8 +126,10 @@ osc52 = "CopyPaste" # or CopyOnly on default
 ```
 
 进入vi模式默认的快捷键是ctrl+shift+space，在linux和windows下可以直接用
+The default shortcut key to enter VI mode is Ctrl+Shift+Space, which can be used directly under Linux and Windows
 
 在mac下我用着不行，改成下面的组合可以用
+I can't use it under Mac, so I can use it by changing it to the following combination
 
 ```toml
 [keyboard]
@@ -141,10 +145,20 @@ bindings = [
    4. 到任何地方去粘贴（p或ctrl+v,command+v等等）
    5. 要退出vi模式，再次按下启动组合键即可
 
+Directions of use:
+
+   1. Press Command+Option+I (or Ctrl+Shift+Space) to start VI mode
+   2. As with VI, start the selection with V or V
+   3. Once selected, press y to copy
+   4. Paste anywhere (p or ctrl+v, command+v, etc.)
+   5. To exit VI mode, press the start combo key again
+
 ## 5. the tmux vi mode
 
 tmux 3.5a，好像并不需要配置，直接就支持osc52
 我设置了两项是支持鼠标和vi快捷键
+it doesn't seem to need to be configured, it directly supports OSC52 
+I've set two items to support mouse and vi shortcuts
 
 ~/.tmux.conf
 ```
@@ -157,7 +171,15 @@ setw -g mode-keys vi
    2. 移动光标到想复制的地方，按下space（相当于vi里按下v），出现黄色选择
    3. 或者按下大V，可以复制行
    4. 选择完成后按下enter
-   5. 到任何地方去粘贴（在tmux里可以用ctrl+b,]）
+   5. 到任何地方去粘贴（在tmux里可以用ctrl+b,]或者ctrl+v,command+v）
+
+Directions:
+
+   1. Press Ctrl+B, and then press [, and a line number prompt will appear in the upper right corner to enter VI mode
+   2. Move the cursor to the place you want to copy, press Space (equivalent to V in VI), and a yellow selection will appear
+   3. Or press the big V to copy the line
+   4. Press Enter when the selection is complete
+   5. Paste anywhere (CTRL+B,] or ctrl+v/command+v in TMUX)
 
 ## 6. tested platform
    1. linux(client alacritty) ssh to mac(sshd server,homebrew nvim/tmux)
