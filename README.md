@@ -158,9 +158,9 @@ setw -g mode-keys vi
    5. 到任何地方去粘贴（在tmux里可以用ctrl+b,]）
 
 ## 6. tested platform
-   1. linux(client) ssh to mac(server)
-   2. mac to linux
-   3. windows to mac or linux
-   4. [failed] ios to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
+   1. linux(client alacritty) ssh to mac(sshd server)
+   2. mac(client alacritty) to linux(sshd server)
+   3. windows(client alacritty) to mac or linux
+   4. [failed] ios(client prompt3) to mac or linux（用prompt3设置允许存取剪贴板，直接字符串echo测试或tmux测试成功，nvim测试失败，原因不明）
 
 
